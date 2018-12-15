@@ -13,6 +13,7 @@ def handler(event, context=None):
   data = get_history(username)
   return successResponse({"history": data})
 
+
 def get_history(username):
   response = table.query(
     KeyConditionExpression=Key('username').eq(username),
