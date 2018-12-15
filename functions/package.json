@@ -3,6 +3,7 @@
     "upload-goldeneye": "cd goldeneye && cd package && zip -r ../goldeneye.zip . && cd .. && zip -g goldeneye.zip * -x package/**\\* && aws lambda update-function-code --function-name goldeneye --zip-file fileb://goldeneye.zip && del goldeneye.zip && cd ..",
     "upload-quota": "cd CybertoolQuota && zip -r CybertoolQuota.zip * && aws lambda update-function-code --function-name CybertoolQuota --zip-file fileb://CybertoolQuota.zip && del CybertoolQuota.zip && cd ..",
     "upload-site-verification": "cd CybertoolSiteVerification && cd package && zip -r ../CybertoolSiteVerification.zip . && cd .. && zip -g CybertoolSiteVerification.zip * -x package/**\\* && aws lambda update-function-code --function-name CybertoolSiteVerification --zip-file fileb://CybertoolSiteVerification.zip && del CybertoolSiteVerification.zip && cd ..",
+    "upload-history": "cd CybertoolHistory && zip -r CybertoolHistory.zip * && aws lambda update-function-code --function-name CybertoolHistory --zip-file fileb://CybertoolHistory.zip && del CybertoolHistory.zip && cd ..",
     "deploy": "git add . && git commit -m 'commit' && git push origin master"
   
   }
